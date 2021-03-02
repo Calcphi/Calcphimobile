@@ -157,4 +157,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\fracao.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\About.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Calculator.png" />
+  </ItemGroup>
 </Project>

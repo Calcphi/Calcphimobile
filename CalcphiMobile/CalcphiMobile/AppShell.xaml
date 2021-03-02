@@ -91,7 +91,7 @@
     <FlyoutItem Title="Simplify" Icon="Simplify.png">
         <ShellContent Route="Simplify" ContentTemplate="{DataTemplate local:Simplify}" />
     </FlyoutItem>
-    <FlyoutItem Title="Derivative">
+    <FlyoutItem Title="Derivative" Icon="derivada.png">
         <ShellContent Route="Derivative" ContentTemplate="{DataTemplate local:Derivative}" />
     </FlyoutItem>
     <FlyoutItem Title="About">

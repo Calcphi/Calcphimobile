@@ -71,11 +71,11 @@
                             BackgroundColor="#39129E"
                             TextColor="White" />
 
-                    <Button Text="x" Font="mathnormal" FontSize="29" FontAttributes="Bold"
+                    <Button ImageSource="x.png" 
+                            Padding="13"                          
                             CornerRadius="9"
-                            BackgroundColor="#39129E"
-                            TextColor="White"/>
-
+                            BackgroundColor="#39129E"/>
+                    
                     <Button ImageSource="backspace.png" 
                             Padding="13"                          
                             CornerRadius="9"

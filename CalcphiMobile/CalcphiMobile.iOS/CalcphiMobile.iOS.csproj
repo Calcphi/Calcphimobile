@@ -166,4 +166,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\Simplify.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\x.png" />
+  </ItemGroup>
 </Project>

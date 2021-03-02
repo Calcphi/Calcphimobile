@@ -8415,7 +8415,10 @@ namespace CalcphiMobile.Droid
 			public const int tooltip_frame_light = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int xamarin_logo = 2131165312;
+			public const int x = 2131165312;
+			
+			// aapt resource value: 0x7F070081
+			public const int xamarin_logo = 2131165313;
 			
 			static Drawable()
 			{

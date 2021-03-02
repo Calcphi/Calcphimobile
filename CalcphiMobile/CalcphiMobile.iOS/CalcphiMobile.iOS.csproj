@@ -163,4 +163,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\Calculator.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Simplify.png" />
+  </ItemGroup>
 </Project>

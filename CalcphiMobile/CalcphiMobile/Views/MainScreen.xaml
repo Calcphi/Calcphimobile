@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalcphiMobile.Views.MainScreen"
+             xmlns:vm="clr-namespace:CalcphiMobile.ViewModels"
+             Title="{Binding Title}"
+             BackgroundColor="Black"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+
+    <!--
+    The shell Title below overrides the vm function
+     -->
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="EndAndExpand">
+
+            <Label Text="Calcφhi" FontFamily="Roboto" FontSize="25" TextColor="White" FontAttributes="Bold" TranslationY="8"/>
+
+            <Image Source="logo.png" Scale="0.70" />
+
+        </StackLayout>
+
+
+
+    </Shell.TitleView>
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+
+            <Setter Property="WidthRequest" Value="57"/>
+            <Setter Property="WidthRequest" Value="86"/>
+
+        </Style>
+        <Style TargetType="ImageButton">
+
+            <Setter Property="HeightRequest" Value="57"/>
+            <Setter Property="WidthRequest" Value="85"/>
+
+        </Style>
+
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#292A23"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   CornerRadius="0">
+
+            </Frame>
+
+            <Grid  VerticalOptions="End">
+
+
+                <StackLayout Orientation="Horizontal" Spacing="15" HorizontalOptions="Center">
+
+                    <Button Text="^" Font="Roboto" FontSize="29" FontAttributes="Bold" 
+                            CornerRadius="9"
+                            BackgroundColor="#39129E"
+                            TextColor="White"/>
+
+                    <Button Text="√" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="9"
+                            BackgroundColor="#39129E"
+                            TextColor="White" />
+
+                    <ImageButton Source="pi.png"
+                            Padding="16"
+                            CornerRadius="9"
+                            BackgroundColor="#39129E"/>
+
+                    <ImageButton Source="backspace.png" 
+                            Padding="13"                          
+                            CornerRadius="9"
+                            BackgroundColor="#39129E"/>
+
+
+
+                </StackLayout>
+                <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" Spacing="15" Grid.Row="1">
+
+                    <Button Text="( " Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="9"
+                            BackgroundColor="#39129E"
+                            TextColor="White"/>
+
+                    <Button Text=" )" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="9"
+                            BackgroundColor="#39129E"
+                            TextColor="White" />
+                    <ImageButton Source="fracao.png"
+                            Padding="13.5"
+                            CornerRadius="9"
+                            BackgroundColor="#39129E"/>
+
+                    <ImageButton Source="divisao.png" 
+                            Padding="16"                          
+                            CornerRadius="9"
+                            BackgroundColor="#39129E"/>
+
+
+                </StackLayout>
+                <StackLayout  Orientation="Horizontal"  HorizontalOptions="Center" Spacing="15" Grid.Row="2">
+
+                    <Button Text="7" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="30"
+                            BackgroundColor="#5A3CA7"
+                            TextColor="White"/>
+
+                    <Button Text="8" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="30"
+                            BackgroundColor="#5A3CA7"
+                            TextColor="White"/>
+                    <Button Text="9" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="30"
+                            BackgroundColor="#5A3CA7"
+                            TextColor="White"/>
+
+                    <Button Text="X" Font="Roboto" FontSize="29" FontAttributes="Bold" TextTransform="Lowercase"
+                            CornerRadius="9"
+                            BackgroundColor="#39129E"
+                            TextColor="White" />
+
+
+                </StackLayout>
+                <StackLayout  Orientation="Horizontal"  HorizontalOptions="Center" Spacing="15" Grid.Row="3">
+
+                    <Button Text="4" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="30"
+                            BackgroundColor="#5A3CA7"
+                            TextColor="White"/>
+
+                    <Button Text="5" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="30"
+                            BackgroundColor="#5A3CA7"
+                            TextColor="White"/>
+                    <Button Text="6" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="30"
+                            BackgroundColor="#5A3CA7"
+                            TextColor="White"/>
+
+                    <Button Text="-" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="9"
+                            BackgroundColor="#39129E"
+                            TextColor="White" />
+
+
+                </StackLayout>
+                <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" Spacing="15" Grid.Row="4">
+
+                    <Button Text="1" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="30"
+                            BackgroundColor="#5A3CA7"
+                            TextColor="White"/>
+
+                    <Button Text="2" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="30"
+                            BackgroundColor="#5A3CA7"
+                            TextColor="White"/>
+                    <Button Text="3" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="30"
+                            BackgroundColor="#5A3CA7"
+                            TextColor="White"/>
+
+                    <Button Text="+" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="9"
+                            BackgroundColor="#39129E"
+                            TextColor="White" />
+
+
+                </StackLayout>
+                <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" Spacing="15" Grid.Row="5">
+
+                    <Button Text="0" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="30"
+                            BackgroundColor="#5A3CA7"
+                            TextColor="White"/>
+
+                    <Button Text="." Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="30"
+                            BackgroundColor="#5A3CA7"
+                            TextColor="White"/>
+                    <Button Text="EXP" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="30"
+                            BackgroundColor="#5A3CA7"
+                            TextColor="White"/>
+
+                    <Button Text="=" Font="Roboto" FontSize="29" FontAttributes="Bold"
+                            CornerRadius="9"
+                            BackgroundColor="#39129E"
+                            TextColor="White" />
+
+
+                </StackLayout>
+                <Frame BackgroundColor="Black" Grid.Row="6"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   CornerRadius="0">
+
+                </Frame>
+
+
+            </Grid>
+
+
+
+        </StackLayout>
+        
+
+    </ContentPage.Content>
+    
+
+
+
+</ContentPage>

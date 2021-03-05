@@ -44,7 +44,17 @@
                    HorizontalOptions="FillAndExpand"
                    VerticalOptions="FillAndExpand"
                    CornerRadius="0">
+                <StackLayout>
 
+                    <Label x:Name="Equation" Text="" FontSize="29" FontAttributes="Bold"
+                           TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+
+                    <Label x:Name="Result" Text="" FontSize="29" FontAttributes="Bold"
+                           TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+
+
+                </StackLayout>
+                
             </Frame>
 
             <Grid  VerticalOptions="End" Grid.Row="1">
@@ -68,7 +78,8 @@
                     <Button Text="^" Font="Roboto" FontSize="29" FontAttributes="Bold" 
                             CornerRadius="9"
                             BackgroundColor="#39129E"
-                            TextColor="White"/>
+                            TextColor="White"
+                            Clicked="Exponent"/>
 
                     <Button Text="√" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="9"
@@ -83,7 +94,8 @@
                     <Button ImageSource="backspace.png" 
                             Padding="13"                          
                             CornerRadius="9"
-                            BackgroundColor="#39129E"/>
+                            BackgroundColor="#39129E"
+                            Clicked="Backspace"/>
 
 
 
@@ -93,12 +105,14 @@
                     <Button Text="( " Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="9"
                             BackgroundColor="#39129E"
-                            TextColor="White"/>
+                            TextColor="White"
+                            Clicked="OpenBrackets"/>
 
                     <Button Text=" )" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="9"
                             BackgroundColor="#39129E"
-                            TextColor="White" />
+                            TextColor="White" 
+                            Clicked="CloseBrackets"/>
                     <Button ImageSource="fracao.png"
                             Padding="13.5"
                             CornerRadius="9"
@@ -107,7 +121,8 @@
                     <Button Text="÷" Font="Roboto" FontSize="32" FontAttributes="Bold"                         
                             CornerRadius="9"
                             TextColor="White"
-                            BackgroundColor="#39129E"/>
+                            BackgroundColor="#39129E"
+                            Clicked="Division"/>
 
 
                 </StackLayout>
@@ -116,21 +131,26 @@
                     <Button Text="7" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="30"
                             BackgroundColor="#5A3CA7"
-                            TextColor="White"/>
+                            TextColor="White"
+                            Clicked="Seven"/>
 
                     <Button Text="8" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="30"
                             BackgroundColor="#5A3CA7"
-                            TextColor="White"/>
+                            TextColor="White"
+                            Clicked="Eight"/>
+                    
                     <Button Text="9" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="30"
                             BackgroundColor="#5A3CA7"
-                            TextColor="White"/>
+                            TextColor="White"
+                            Clicked="Nine"/>
 
                     <Button Text="X" Font="Roboto" FontSize="29" FontAttributes="Bold" TextTransform="Lowercase"
                             CornerRadius="9"
                             BackgroundColor="#39129E"
-                            TextColor="White" />
+                            TextColor="White"
+                            Clicked="Multiplication"/>
 
 
                 </StackLayout>
@@ -139,21 +159,26 @@
                     <Button Text="4" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="30"
                             BackgroundColor="#5A3CA7"
-                            TextColor="White"/>
+                            TextColor="White"
+                            Clicked="Four"/>
 
                     <Button Text="5" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="30"
                             BackgroundColor="#5A3CA7"
-                            TextColor="White"/>
+                            TextColor="White"
+                            Clicked="Five"/>
+                    
                     <Button Text="6" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="30"
                             BackgroundColor="#5A3CA7"
-                            TextColor="White"/>
+                            TextColor="White"
+                            Clicked="Six"/>
 
                     <Button Text="-" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="9"
                             BackgroundColor="#39129E"
-                            TextColor="White" />
+                            TextColor="White"
+                            Clicked="Minus"/>
 
 
                 </StackLayout>
@@ -162,21 +187,26 @@
                     <Button Text="1" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="30"
                             BackgroundColor="#5A3CA7"
-                            TextColor="White"/>
+                            TextColor="White"
+                            Clicked="One"/>
 
                     <Button Text="2" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="30"
                             BackgroundColor="#5A3CA7"
-                            TextColor="White"/>
+                            TextColor="White"
+                            Clicked="Two"/>
+                    
                     <Button Text="3" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="30"
                             BackgroundColor="#5A3CA7"
-                            TextColor="White"/>
+                            TextColor="White"
+                            Clicked="Three"/>
 
                     <Button Text="+" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="9"
                             BackgroundColor="#39129E"
-                            TextColor="White" />
+                            TextColor="White" 
+                            Clicked="Plus"/>
 
 
                 </StackLayout>
@@ -185,21 +215,26 @@
                     <Button Text="0" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="30"
                             BackgroundColor="#5A3CA7"
-                            TextColor="White"/>
+                            TextColor="White"
+                            Clicked="Zero"/>
 
                     <Button Text="." Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="30"
                             BackgroundColor="#5A3CA7"
-                            TextColor="White"/>
+                            TextColor="White"
+                            Clicked="Dot"/>
+                    
                     <Button Text="EXP" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="30"
                             BackgroundColor="#5A3CA7"
-                            TextColor="White"/>
+                            TextColor="White"
+                            Clicked="EXP"/>
 
                     <Button Text="=" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="9"
                             BackgroundColor="#39129E"
-                            TextColor="White" />
+                            TextColor="White"
+                            Clicked="Equal"/>
 
 
                 </StackLayout>

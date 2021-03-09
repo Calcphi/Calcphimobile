@@ -279,7 +279,7 @@ namespace CalcphiMobile.Views
             else
             {
                 Equation.Text.Replace(",", ".");
-                List<Node> nodes = t.Tokenize(Equation.Text);
+                List<Node> nodes = t.Tokenize(RealEquation(Equation.Text));
                 Node nf = p.Parse(nodes);
                 Result.Text = Convert.ToString(s.Solve(nf));
 
@@ -288,6 +288,27 @@ namespace CalcphiMobile.Views
 
 
         }
+        public static string RealEquation(string e)
+        {
+            string re = e;
 
+            for (int i = 0; i < (re.Length - 1); i++)
+            {
+                if (Char.IsDigit(re[i]) && Char.IsLetter(re[i + 1]))
+                {
+                    re = re.Substring(0, i + 1) + "*" + re.Substring(i + 1, re.Length - (i + 1));
+
+                }
+                if (Char.IsDigit(re[i]) && re[i + 1] == '(')
+                {
+                    re = re.Substring(0, i + 1) + "*" + re.Substring(i + 1, re.Length - (i + 1));
+
+                }
+
+
+            }
+
+            return re;
+        }
     }
 }

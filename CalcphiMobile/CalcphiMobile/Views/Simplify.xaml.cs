@@ -289,13 +289,23 @@ namespace CalcphiMobile.Views
             }
             else
             {
-                Equation.Text.Replace(",", ".");
-                List<Node> nodes = t.Tokenize(RealEquation(Equation.Text));
-                Node nf = p.Parse(nodes);
-                Node ns = simp.Simplify(nf);
+
+                try
+                {
+                    Equation.Text.Replace(",", ".");
+                    List<Node> nodes = t.Tokenize(RealEquation(Equation.Text));
+                    Node nf = p.Parse(nodes);
+                    Node ns = simp.Simplify(nf);
 
 
-                Result.Text = OrganizeTree(ns, ns);
+                    Result.Text = OrganizeTree(ns, ns);
+                }
+                catch
+                {
+                    Result.Text = "Error";
+
+                }
+
 
             }
 

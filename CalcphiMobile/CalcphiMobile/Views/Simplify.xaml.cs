@@ -402,7 +402,7 @@ namespace CalcphiMobile.Views
                     re = re.Substring(0, i + 1) + "*" + re.Substring(i + 1, re.Length - (i + 1));
 
                 }
-                if (Char.IsDigit(re[i]) && re[i + 1] == '(')
+                if ((Char.IsDigit(re[i]) && re[i + 1] == '(') || (re[i] == ')' && Char.IsDigit(re[i + 1])))
                 {
                     re = re.Substring(0, i + 1) + "*" + re.Substring(i + 1, re.Length - (i + 1));
 

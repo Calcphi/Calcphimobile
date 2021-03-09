@@ -268,6 +268,7 @@ namespace CalcphiMobile.Views
         Parser p = new Parser();
         Solver s = new Solver();
 
+
         void Equal(object sender, EventArgs e)
         {
 
@@ -278,10 +279,17 @@ namespace CalcphiMobile.Views
             }
             else
             {
-                Equation.Text.Replace(",", ".");
-                List<Node> nodes = t.Tokenize(RealEquation(Equation.Text));
-                Node nf = p.Parse(nodes);
-                Result.Text = Convert.ToString(s.Solve(nf));
+                try
+                {
+                    Equation.Text.Replace(",", ".");
+                    List<Node> nodes = t.Tokenize(RealEquation(Equation.Text));
+                    Node nf = p.Parse(nodes);
+                    Result.Text = Convert.ToString(s.Solve(nf));
+                }
+                catch
+                {
+                    Result.Text = "Error";
+                }
 
 
             }

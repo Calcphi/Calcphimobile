@@ -151,6 +151,12 @@ namespace CalcphiMobile.Views
 
         void Plus(object sender, EventArgs e)
         {
+            if (Result.Text == "Error")
+            {
+                Equation.Text = Equation.Text;
+                Result.Text = "";
+
+            }
 
             if (Result.Text != "")
             {
@@ -163,17 +169,30 @@ namespace CalcphiMobile.Views
         }
         void Minus(object sender, EventArgs e)
         {
+            if (Result.Text == "Error")
+            {
+                Equation.Text = Equation.Text;
+                Result.Text = "";
+
+            }
             if (Result.Text != "")
             {
                 Equation.Text = Result.Text;
                 Result.Text = "";
 
             }
+            
 
             Equation.Text = Equation.Text + "-";
         }
         void Multiplication(object sender, EventArgs e)
         {
+            if (Result.Text == "Error")
+            {
+                Equation.Text = Equation.Text;
+                Result.Text = "";
+
+            }
             if (Result.Text != "")
             {
                 Equation.Text = Result.Text;
@@ -185,6 +204,12 @@ namespace CalcphiMobile.Views
         }
         void Division(object sender, EventArgs e)
         {
+            if (Result.Text == "Error")
+            {
+                Equation.Text = Equation.Text;
+                Result.Text = "";
+
+            }
             if (Result.Text != "")
             {
                 Equation.Text = Result.Text;
@@ -196,6 +221,12 @@ namespace CalcphiMobile.Views
         }
         void Exponent(object sender, EventArgs e)
         {
+            if (Result.Text == "Error")
+            {
+                Equation.Text = Equation.Text;
+                Result.Text = "";
+
+            }
             if (Result.Text != "")
             {
                 Equation.Text = Result.Text;

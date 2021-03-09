@@ -15,20 +15,7 @@ namespace CalcphiMobile.ViewModels
 {
     public class MainScreenViewModel
     {
-        string Equation = "hello";
 
-        void One(object sender, EventArgs e)
-        {
-            Equation = Equation + "1";
-        }
-        void Two(object sender, EventArgs e)
-        {
-            Equation = Equation + "2";
-        }
-        void Plus(object sender, EventArgs e)
-        {
-            Equation = Equation + "+";
-        }
 
     }
 }

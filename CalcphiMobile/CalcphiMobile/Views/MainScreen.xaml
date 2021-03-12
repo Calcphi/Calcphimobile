@@ -89,7 +89,8 @@
                     <Button ImageSource="pi.png"
                             Padding="16"
                             CornerRadius="9"
-                            BackgroundColor="#39129E"/>
+                            BackgroundColor="#39129E"
+                            Clicked="Pi"/>
 
                     <Button ImageSource="backspace.png" 
                             Padding="13"                          

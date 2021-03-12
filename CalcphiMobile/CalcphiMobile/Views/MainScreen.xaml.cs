@@ -259,6 +259,19 @@ namespace CalcphiMobile.Views
             Equation.Text = Equation.Text + ")";
         }
 
+        void Pi(object sender, EventArgs e)
+        {
+
+            if (Result.Text != "")
+            {
+                Result.Text = "";
+                Equation.Text = "";
+
+            }
+
+            Equation.Text = Equation.Text + "π";
+        }
+
 
         void EXP(object sender, EventArgs e)
         {
@@ -312,7 +325,7 @@ namespace CalcphiMobile.Views
             {
                 try
                 {
-                    Equation.Text.Replace(",", ".");
+                    Equation.Text = Equation.Text.Replace(",", ".");
                     List<Node> nodes = t.Tokenize(RealEquation(Equation.Text));
                     Node nf = p.Parse(nodes);
                     Result.Text = Convert.ToString(s.Solve(nf));
@@ -329,10 +342,11 @@ namespace CalcphiMobile.Views
         }
         public static string RealEquation(string e)
         {
-            string re = e;
+            string re = e.Replace("π", "pi");
 
             for (int i = 0; i < (re.Length - 1); i++)
-            {
+            {               
+
                 if (Char.IsDigit(re[i]) && Char.IsLetter(re[i + 1]))
                 {
                     re = re.Substring(0, i + 1) + "*" + re.Substring(i + 1, re.Length - (i + 1));
@@ -357,6 +371,7 @@ namespace CalcphiMobile.Views
                 {
                     re = re.Substring(0, i + 1) + "1*" + re.Substring(i + 1, re.Length - (i + 1));
                 }
+
 
 
             }

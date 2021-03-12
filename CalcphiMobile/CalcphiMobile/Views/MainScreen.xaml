@@ -86,11 +86,11 @@
                             BackgroundColor="#39129E"
                             TextColor="White" />
 
-                    <Button ImageSource="pi.png"
-                            Padding="16"
+                    <Button Text="ans" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="9"
                             BackgroundColor="#39129E"
-                            Clicked="Pi"/>
+                            TextColor="White"
+                            Clicked="Ans"/>
 
                     <Button ImageSource="backspace.png" 
                             Padding="13"                          
@@ -114,10 +114,13 @@
                             BackgroundColor="#39129E"
                             TextColor="White" 
                             Clicked="CloseBrackets"/>
-                    <Button ImageSource="fracao.png"
-                            Padding="13.5"
+
+                    <Button ImageSource="pi.png"
+                            Padding="16"
                             CornerRadius="9"
-                            BackgroundColor="#39129E"/>
+                            BackgroundColor="#39129E"
+                            Clicked="Pi"/>
+
 
                     <Button Text="÷" Font="Roboto" FontSize="32" FontAttributes="Bold"                         
                             CornerRadius="9"

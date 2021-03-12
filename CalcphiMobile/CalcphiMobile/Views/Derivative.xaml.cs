@@ -21,6 +21,7 @@ namespace CalcphiMobile.Views
             Equation.Text = "";
         }
 
+        string ans = "";
         void Zero(object sender, EventArgs e)
         {
 
@@ -269,6 +270,18 @@ namespace CalcphiMobile.Views
             Equation.Text = Equation.Text + "x";
         }
 
+        void Ans(object sender, EventArgs e)
+        {
+
+            if (Result.Text != "")
+            {
+                Result.Text = "";
+                Equation.Text = "";
+
+            }
+
+            Equation.Text = Equation.Text + ans;
+        }
 
         void EXP(object sender, EventArgs e)
         {
@@ -330,6 +343,7 @@ namespace CalcphiMobile.Views
                     Node nd = d.Derivate(nf);
 
                     Result.Text = RealResult(OrganizeTree(nd, nd));
+                    ans = Result.Text;
                 }
                 catch
                 {

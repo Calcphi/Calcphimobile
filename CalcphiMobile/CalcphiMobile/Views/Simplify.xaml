@@ -83,12 +83,12 @@
                             BackgroundColor="#39129E"
                             TextColor="White" />
 
-                    <Button ImageSource="x.png" 
-                            Padding="13"                          
+                    <Button Text="Ans" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="9"
                             BackgroundColor="#39129E"
-                            Clicked="LetterX"/>
-                    
+                            TextColor="White"
+                            Clicked="Ans"/>
+
                     <Button ImageSource="backspace.png" 
                             Padding="13"                          
                             CornerRadius="9"
@@ -112,10 +112,11 @@
                             TextColor="White" 
                             Clicked="CloseBrackets"/>
                     
-                    <Button ImageSource="fracao.png"
-                            Padding="13.5"
+                    <Button ImageSource="x.png" 
+                            Padding="13"                          
                             CornerRadius="9"
-                            BackgroundColor="#39129E"/>
+                            BackgroundColor="#39129E"
+                            Clicked="LetterX"/>
 
                     <Button Text="÷" Font="Roboto" FontSize="32" FontAttributes="Bold"                         
                             CornerRadius="9"

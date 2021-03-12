@@ -23,6 +23,8 @@ namespace CalcphiMobile.Views
             
         }
 
+        string ans = "";
+
         void Zero(object sender, EventArgs e)
         {
 
@@ -285,6 +287,18 @@ namespace CalcphiMobile.Views
 
             Equation.Text = Equation.Text + "*10^";
         }
+        void Ans(object sender, EventArgs e)
+        {
+
+            if (Result.Text != "")
+            {
+                Result.Text = "";
+                Equation.Text = "";
+
+            }
+
+            Equation.Text = Equation.Text + ans;
+        }
         void Backspace(object sender, EventArgs e)
         {
             if (Result.Text != "")
@@ -329,6 +343,7 @@ namespace CalcphiMobile.Views
                     List<Node> nodes = t.Tokenize(RealEquation(Equation.Text));
                     Node nf = p.Parse(nodes);
                     Result.Text = Convert.ToString(s.Solve(nf));
+                    ans = Result.Text;
                 }
                 catch
                 {

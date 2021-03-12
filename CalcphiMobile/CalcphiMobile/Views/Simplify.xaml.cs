@@ -21,6 +21,7 @@ namespace CalcphiMobile.Views
             Equation.Text = "";
         }
 
+        string ans = "";
         void Zero(object sender, EventArgs e)
         {
 
@@ -282,6 +283,18 @@ namespace CalcphiMobile.Views
 
             Equation.Text = Equation.Text + "*10^";
         }
+        void Ans(object sender, EventArgs e)
+        {
+
+            if (Result.Text != "")
+            {
+                Result.Text = "";
+                Equation.Text = "";
+
+            }
+
+            Equation.Text = Equation.Text + ans;
+        }
         void Backspace(object sender, EventArgs e)
         {
             if (Result.Text != "")
@@ -329,6 +342,7 @@ namespace CalcphiMobile.Views
 
 
                     Result.Text = RealResult(OrganizeTree(ns, ns));
+                    ans = Result.Text;
                 }
                 catch
                 {

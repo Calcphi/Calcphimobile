@@ -328,7 +328,7 @@ namespace CalcphiMobile.Views
                     Node ns = simp.Simplify(nf);
 
 
-                    Result.Text = OrganizeTree(ns, ns);
+                    Result.Text = RealResult(OrganizeTree(ns, ns));
                 }
                 catch
                 {
@@ -451,12 +451,36 @@ namespace CalcphiMobile.Views
                 {
                     re = re.Substring(0, i + 1) + "1*" + re.Substring(i + 1, re.Length - (i + 1));
                 }
+                if (re[i] == '-' && Char.IsLetter(re[i + 1]))
+                {
+                    re = re.Substring(0, i + 1) + "1*" + re.Substring(i + 1, re.Length - (i + 1));
+                }
 
 
             }
 
             return re;
         }
+        public static string RealResult(string rr)
+        {
+            for (int i = 0; i < (rr.Length - 2); i++)
+            {
+                if (Char.IsDigit(rr[i]) && rr[i+1] == '*' && Char.IsLetter(rr[i + 2]))
+                {
+                    rr = rr.Remove(i + 1, 1);
 
+                }
+                if (Char.IsDigit(rr[i]) && rr[i + 1] == '*' && rr[i + 2] == '(')
+                {
+                    rr = rr.Remove(i + 1, 1);
+
+                }
+
+            }
+
+            rr = rr.Replace("-1x", "-x");
+
+            return rr;
+        }
     }
 }

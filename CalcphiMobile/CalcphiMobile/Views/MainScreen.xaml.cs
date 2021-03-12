@@ -378,5 +378,7 @@ namespace CalcphiMobile.Views
 
             return re;
         }
+
+
     }
 }

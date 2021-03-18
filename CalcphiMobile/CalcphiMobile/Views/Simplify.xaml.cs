@@ -234,7 +234,18 @@ namespace CalcphiMobile.Views
 
             Equation.Text = Equation.Text + "^";
         }
-        void OpenBrackets(object sender, EventArgs e)
+        void Root(object sender, EventArgs e)
+        {
+            if (Result.Text != "")
+            {
+                Result.Text = "";
+                Equation.Text = "";
+
+            }
+
+            Equation.Text = Equation.Text + "√(";
+        }
+            void OpenBrackets(object sender, EventArgs e)
         {
             if (Result.Text != "")
             {
@@ -469,9 +480,17 @@ namespace CalcphiMobile.Views
                 {
                     re = re.Substring(0, i + 1) + "1*" + re.Substring(i + 1, re.Length - (i + 1));
                 }
+                if ((Char.IsDigit(re[i]) || Char.IsLetter(re[i])) && re[i + 1] == '√')
+                {
+                    re = re.Substring(0, i + 1) + "*" + re.Substring(i + 1, re.Length - (i + 1));
+
+                }
 
 
             }
+
+            re = re.Replace("√(", "root2(");
+
 
             return re;
         }
@@ -491,6 +510,29 @@ namespace CalcphiMobile.Views
                 }
 
             }
+            for (int i = 0; i < (rr.Length - 4); i++) //Transforms ^1/2 into square roots
+            {
+                bool foundparentesis = false;
+
+                if (rr.Substring(i, 5) == ")^0.5")
+                {
+                    for (int i2 = i; foundparentesis == true ; i2--)
+                    {
+                        if (rr[i2] == '(')
+                        {
+                            rr = rr.Substring(0, i2) + "√" + rr.Substring(i2, rr.Length - (i2));
+
+                            rr.Remove(i + 1, 4);
+
+                            foundparentesis = true;
+                        }
+
+
+                    }
+
+                }
+            }
+
 
             rr = rr.Replace("-1x", "-x");
 

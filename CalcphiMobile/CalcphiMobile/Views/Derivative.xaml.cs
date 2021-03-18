@@ -234,6 +234,17 @@ namespace CalcphiMobile.Views
 
             Equation.Text = Equation.Text + "^";
         }
+        void Root(object sender, EventArgs e)
+        {
+            if (Result.Text != "")
+            {
+                Result.Text = "";
+                Equation.Text = "";
+
+            }
+
+            Equation.Text = Equation.Text + "√(";
+        }
         void OpenBrackets(object sender, EventArgs e)
         {
             if (Result.Text != "")
@@ -470,14 +481,23 @@ namespace CalcphiMobile.Views
                 {
                     re = re.Substring(0, i + 1) + "1*" + re.Substring(i + 1, re.Length - (i + 1));
                 }
+                if ((Char.IsDigit(re[i]) || Char.IsLetter(re[i])) && re[i + 1] == '√')
+                {
+                    re = re.Substring(0, i + 1) + "*" + re.Substring(i + 1, re.Length - (i + 1));
+
+                }
 
 
             }
+
+            re = re.Replace("√(", "root2(");
+
 
             return re;
         }
         public static string RealResult(string rr)
         {
+
             for (int i = 0; i < (rr.Length - 2); i++)
             {
                 if (Char.IsDigit(rr[i]) && rr[i + 1] == '*' && Char.IsLetter(rr[i + 2]))
@@ -492,6 +512,7 @@ namespace CalcphiMobile.Views
                 }
 
             }
+
 
             rr = rr.Replace("-1x", "-x");
 

@@ -80,7 +80,8 @@
                     <Button Text="√" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="9"
                             BackgroundColor="#39129E"
-                            TextColor="White" />
+                            TextColor="White"
+                            Clicked="Root"/>
 
                     <Button Text="Ans" Font="Roboto" FontSize="29" FontAttributes="Bold"
                             CornerRadius="9"

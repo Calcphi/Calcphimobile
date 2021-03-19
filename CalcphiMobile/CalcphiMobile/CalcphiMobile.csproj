@@ -6,13 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Calcphi.Athena_Engine" Version="1.0.0-date202103111026" />
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Athena engine\Athena_Engine\Athena_Engine.csproj" />
+	  <PackageReference Include="Calcphi.Athena_Engine" Version="1.0.0-date202103191658" />
   </ItemGroup>
 
   <ItemGroup>

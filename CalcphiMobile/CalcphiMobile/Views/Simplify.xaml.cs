@@ -346,7 +346,7 @@ namespace CalcphiMobile.Views
 
                 try
                 {
-                    Equation.Text.Replace(",", ".");
+                    Equation.Text = Equation.Text.Replace(",", ".");
                     List<Node> nodes = t.Tokenize(RealEquation(Equation.Text));
                     Node nf = p.Parse(nodes);
                     Node ns = simp.Simplify(nf);
@@ -513,18 +513,33 @@ namespace CalcphiMobile.Views
             for (int i = 0; i < (rr.Length - 4); i++) //Transforms ^1/2 into square roots
             {
                 bool foundparentesis = false;
+                int extracounter = 0; //to count extra parentesis 
 
                 if (rr.Substring(i, 5) == ")^0.5")
                 {
-                    for (int i2 = i; foundparentesis == true ; i2--)
+                    for (int i2 = i - 1; foundparentesis == false; i2--)
                     {
-                        if (rr[i2] == '(')
+
+                        if (rr[i2] == ')')
+                        {
+
+                            extracounter = extracounter + 1;
+
+                        }
+
+                        if (rr[i2] == '(' && extracounter == 0)
                         {
                             rr = rr.Substring(0, i2) + "√" + rr.Substring(i2, rr.Length - (i2));
 
-                            rr.Remove(i + 1, 4);
+                            rr = rr.Remove(i + 2, 4);
 
                             foundparentesis = true;
+                        }
+                        else if (rr[i2] == '(' && extracounter != 0)
+                        {
+
+                            extracounter = extracounter - 1;
+
                         }
 
 

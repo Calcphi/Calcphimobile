@@ -353,6 +353,7 @@ namespace CalcphiMobile.Views
 
 
                     Result.Text = RealResult(OrganizeTree(ns, ns));
+                    Result.Text = Result.Text.Replace(",", ".");
                     ans = Result.Text;
                 }
                 catch

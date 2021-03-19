@@ -354,6 +354,7 @@ namespace CalcphiMobile.Views
                     Node nd = d.Derivate(nf);
 
                     Result.Text = RealResult(OrganizeTree(nd, nd));
+                    Result.Text = Result.Text.Replace(",", ".");
                     ans = Result.Text;
                 }
                 catch

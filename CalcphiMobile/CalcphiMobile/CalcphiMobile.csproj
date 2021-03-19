@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-	  <PackageReference Include="Calcphi.Athena_Engine" Version="1.0.0-date202103191658" />
+	  <PackageReference Include="Calcphi.Athena_Engine" Version="1.0.0-date202103191752" />
   </ItemGroup>
 
   <ItemGroup>

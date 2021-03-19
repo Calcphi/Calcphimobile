@@ -496,6 +496,8 @@ namespace CalcphiMobile.Views
         }
         public static string RealResult(string rr)
         {
+            rr = rr.Replace(",", ".");
+
             for (int i = 0; i < (rr.Length - 2); i++)
             {
                 if (Char.IsDigit(rr[i]) && rr[i+1] == '*' && Char.IsLetter(rr[i + 2]))

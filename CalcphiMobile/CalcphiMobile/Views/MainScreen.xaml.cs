@@ -354,6 +354,7 @@ namespace CalcphiMobile.Views
                     List<Node> nodes = t.Tokenize(RealEquation(Equation.Text));
                     Node nf = p.Parse(nodes);
                     Result.Text = Convert.ToString(s.Solve(nf));
+                    Result.Text = Result.Text.Replace(",", ".");
                     ans = Result.Text;
                 }
                 catch

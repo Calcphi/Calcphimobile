@@ -497,6 +497,7 @@ namespace CalcphiMobile.Views
         }
         public static string RealResult(string rr)
         {
+            rr = rr.Replace(",", ".");
 
             for (int i = 0; i < (rr.Length - 2); i++)
             {
